@@ -48,6 +48,7 @@ def testGetItem():
 def testHasCard():
     hList = createHand()
     print(f"Current cards in hand: {hList}")
+
     # if Card(1, 2) in hList:
     #     print("True")
     # else:
