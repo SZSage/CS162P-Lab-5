@@ -71,4 +71,3 @@ class Hand:
             output += f"[{c})] "
         output += "]\n"
         return output
-

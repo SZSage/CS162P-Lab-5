@@ -5,6 +5,24 @@ from handTests import *
 
 
 def main():
+<<<<<<< HEAD
+    # testConstructor()
+    # print()
+    # testAddCard()
+    # print()
+    # testDisCard()
+    # print()
+    # testGetItem()
+    # print()
+    # testHasCard()
+    # print()
+    # testIndexOf()
+    # print()
+    # testHasCardWithValue()
+    # print()
+    # testHasCardWithSuit()
+    # print()
+=======
     testConstructor()
     print()
     testAddCard()
@@ -20,6 +38,7 @@ def main():
     testHasCardWithValue()
     print()
 
+>>>>>>> 2b20d2b3e5a73b495ac59d2ccdf254a3dd15fe26
 
 
 # Press the green button in the gutter to run the script.
