@@ -50,7 +50,6 @@ def testGetItem():
 def testHasCard():
     hList = createHand()
     print(f"Current cards in hand: {hList}")
-<<<<<<< HEAD
     h1 = Card(1, 2)  # 2 of clubs
     c = hList.hasCard(h1)
     print(f"Testing hasCard. Expect hasCard to return True: {c}")
@@ -61,19 +60,6 @@ def testHasCardWithValue():
     print(f"Current cards in hand: {hList}")
     c = hList.hasCardWithValue(9)
     print(f"Testing hasCardWithValue. Expect return True: {c}")
-
-
-
-
-
-
-=======
-
-    # if Card(1, 2) in hList:
-    #     print("True")
-    # else:
-    #     print("False")
->>>>>>> aa4bd62e1076372b02b6a645265338bac1efe8c8
 
 
 
