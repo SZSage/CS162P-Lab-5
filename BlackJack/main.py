@@ -15,6 +15,10 @@ def main():
     print()
     testHasCard()
     print()
+    # testIndexOf()
+    print()
+    testHasCardWithValue()
+    print()
 
 
 

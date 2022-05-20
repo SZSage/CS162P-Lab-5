@@ -13,10 +13,12 @@ def testAddCard():
     hList = Hand()
     h1 = Card(1, 2)
     h2 = Card(3, 4)
+    h3 = Card(2, 1)
     hList.addCard(h1)
     hList.addCard(h2)
-    print(f"Testing addCard. Expect hand to have 2 cards: {hList}")
-    print(f"Expect numCards to be 2: {hList.numCards}")
+    hList.addCard(h3)
+    print(f"Testing addCard. Expect hand to have 3 cards: {hList}")
+    print(f"Expect numCards to be 3: {hList.numCards}")
 
 
 def createHand():
@@ -48,11 +50,30 @@ def testGetItem():
 def testHasCard():
     hList = createHand()
     print(f"Current cards in hand: {hList}")
+<<<<<<< HEAD
+    h1 = Card(1, 2)  # 2 of clubs
+    c = hList.hasCard(h1)
+    print(f"Testing hasCard. Expect hasCard to return True: {c}")
+
+
+def testHasCardWithValue():
+    hList = createHand()
+    print(f"Current cards in hand: {hList}")
+    c = hList.hasCardWithValue(9)
+    print(f"Testing hasCardWithValue. Expect return True: {c}")
+
+
+
+
+
+
+=======
 
     # if Card(1, 2) in hList:
     #     print("True")
     # else:
     #     print("False")
+>>>>>>> aa4bd62e1076372b02b6a645265338bac1efe8c8
 
 
 

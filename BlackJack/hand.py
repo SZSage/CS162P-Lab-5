@@ -26,20 +26,35 @@ class Hand:
         return c
 
     def hasCard(self, card):
+        """checks if card is in hand"""
+        if isinstance(card, Card):
+            return card in self._cards
+        else:
+            return False
+
+    def indexOf(self, card):
+        """checks if index of card is in hand"""
         if isinstance(card, int):
-            return self._cards in Hand
+            return self._cards[card]
+        else:
+            return -1
+
+    def hasCardWithValue(self, other):
+        """checks if card with specific value is in hand"""
+        if isinstance(other, int):
+            for c in self._cards:
+                if c.value == other:
+                    return True
+            return False
         else:
             return False
 
-    def hasMatchingSuit(self, other):
-        if isinstance(other, Card):
-            return self._cards == other.suit
-        else:
+    def hasCardWithSuit(self, other):
+        if isinstance(other, int):
+            for c in self._cards:
+                if c.suit == other:
+                    return True
             return False
-
-    def hasMatchingValue(self, other):
-        if isinstance(other, Card):
-            return self._cards == other.value
         else:
             return False
 
