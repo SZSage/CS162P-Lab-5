@@ -18,15 +18,16 @@ def main():
     dealerHand = BJHand()
     dealerHand.addCard(deck.deal())
     dealerHand.addCard(deck.deal())
-    print(f"Player's {playerHand}Player's Score: {playerHand.score}\n")  # show player hand and score
-    print(f"Dealer's {dealerHand}Dealer's Score: {dealerHand.score}\n")
-    anotherCard = input("Do you want another card? Type yes/no: ")  # ask if user wants another card
+    print(f"Player's {playerHand}Player's Score: {playerHand.score}\n")  # show players hand and score
+    print(f"Dealer's {dealerHand[1]}")  # shows 2nd card from dealers hand
+    # print(f"Dealer's Score: {dealerHand.score}\n")
+    hit = input("Do you want to hit or stand? Type hit/stand: ")  # ask if user wants another card
 
-    while anotherCard == "yes":
+    while hit == "hit":
         playerHand.addCard(deck.deal())  # add card from deck to player hand
-        print(f"Player's {playerHand}Player's score: {playerHand.score}")
-        anotherCard = input("Do you want another card? Type yes/no: ")  # ask again
-        if anotherCard == "yes":
+        print(f"Player's {playerHand}Player's score: {playerHand.score}\n")
+        hit = input("Do you want to hit or stand? Type hit/stand: ")  # ask again
+        if hit == "hit":
             dealerHand.addCard(deck.deal())  # if yes, add another card
 
     if playerHand.score > 21:  # if player score is over 21, bust
@@ -34,23 +35,22 @@ def main():
     else:
         print()
         print(f"Dealer's {dealerHand}")  # display dealers hand
-        while dealerHand.score < 17:  # if dealers hand < 17
+        while dealerHand.score <= 16:  # if dealers hand < 17
             dealtCard = deck.deal()  # deal card
             print(f"Dealer has dealt: {dealtCard}")  # show dealt card
-            dealerHand.addCard(deck.deal())  # add card to dealers hand
-            print(f"Dealer's score: {dealerHand.score}\n")  # display dealers score
+            dealerHand.addCard(dealtCard)  # add card to dealers hand
+            print(f"Dealer's {dealerHand}Dealer's score: {dealerHand.score}\n")  # display dealers score
 
         if dealerHand.score > 21:  # bust if dealers hand is > 21
+            print(f"Dealer's score: {dealerHand.score}")
             print("The dealer busted. You win!")
-        elif playerHand.score > dealerHand.score:
+        elif playerHand.score > dealerHand.score:  # player wins if score > dealer
+            print(f"Dealer's score: {dealerHand.score}")
             print("You win!")
-        elif playerHand.score < dealerHand.score:
+        elif playerHand.score < dealerHand.score:  # dealer wins if score > player
             print("The dealer wins")
         else:
             print("It's a tie.")
-
-
-
 
 
 if __name__ == '__main__':
