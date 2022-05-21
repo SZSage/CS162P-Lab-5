@@ -6,7 +6,7 @@ from hand import *
 
 
 def main():
-<<<<<<< HEAD
+
     while True:
         print("Welcome to Blackjack\n")
         deck = Deck()
@@ -21,7 +21,7 @@ def main():
         dealerHand.addCard(deck)
         print(f"Player score: {playerHand.theScore()}")
 
-=======
+
 
     # testConstructor()
     # print()
@@ -55,7 +55,7 @@ def main():
     testHasCardWithValue()
     print()
     testHasCardWithSuit()
->>>>>>> 2ed36f2732b8eb76580e3f153fecc9c902458bb0
+
 
 
 # Press the green button in the gutter to run the script.
