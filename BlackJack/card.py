@@ -4,7 +4,7 @@ class Card:
         It uses private attributes and property getters and setters.
         Setters have appropriate validation that raise an exception when invalid data is used."""
     __values = ["", "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "Ten", "Jack", "Queen", "King"]
-    __suits = ["", "Clubs", "Diamonds", "Hearts", "Spades" ]
+    __suits = ["", "Clubs", "Diamonds", "Hearts", "Spades"]
 
     # region constructor
     def __init__(self, suit=0, value=0):
@@ -23,7 +23,7 @@ class Card:
 
     @suit.setter
     def suit(self, suit):
-        if isinstance(suit, int) and 0 <= suit <= 4:
+        if isinstance(suit, int) and 1 <= suit <= 4:
             self.__suit = suit
         else:
             raise ValueError(f"Suit must be an integer between 0-4 {type(suit)} {suit}")
