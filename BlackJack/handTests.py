@@ -90,6 +90,10 @@ def testHasCardWithValue():
     print(f"Testing hasCardWithValue. Expect return True: {c}")
 
 
+def testIsBusted():
+    hList = createHand()
+
+
 
 
 

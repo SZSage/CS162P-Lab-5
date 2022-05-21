@@ -7,9 +7,10 @@ class Card:
     __suits = ["", "Clubs", "Diamonds", "Hearts", "Spades"]
 
     # region constructor
-    def __init__(self, suit=0, value=0):
+    def __init__(self, value=0, suit=0):
         self.__suit = suit
         self.__value = value
+
     # endregion
 
     # region property getters and setters
@@ -26,14 +27,15 @@ class Card:
         if isinstance(suit, int) and 1 <= suit <= 4:
             self.__suit = suit
         else:
-            raise ValueError(f"Suit must be an integer between 0-4 {type(suit)} {suit}")
+            raise ValueError(f"Suit must be an integer between 1-4 {type(suit)} {suit}")
 
     @value.setter
     def value(self, value):
-        if isinstance(value, int) and 0 <= value <= 13:
+        if isinstance(value, int) and 1 <= value <= 13:
             self.__value = value
         else:
-            raise ValueError(f"Suit must be an integer between 0-4 {type(value)} {value}")
+            raise ValueError(f"Suit must be an integer between 1-13 {type(value)} {value}")
+
     # endregion
 
     # region card report
@@ -71,7 +73,7 @@ class Card:
             return False
 
     def __str__(self):
-        return f'Card({Card.__values[self.__value]} of {Card.__suits[self.__suit]}'
+        return f'Card({Card.__values[self.__value]} of {Card.__suits[self.__suit]})'
 
     def __eq__(self, other):
         """ This "magic method" is called when you check the equality of 2 cards.  if card1 == card2 for example.

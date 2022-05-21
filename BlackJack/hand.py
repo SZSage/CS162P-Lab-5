@@ -68,6 +68,6 @@ class Hand:
         """String representation of cards in hand"""
         output = f"Hand: "
         for c in self._cards:
-            output += f"[{c})] "
+            output += f"[{c}] "
         output += "]\n"
         return output
