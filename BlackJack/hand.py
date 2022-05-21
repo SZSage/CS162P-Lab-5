@@ -34,8 +34,8 @@ class Hand:
 
     def indexOf(self, card):
         """checks if index of card is in hand"""
-        if isinstance(card, int):
-            return self._cards[card]
+        if isinstance(card, Card):
+            return self._cards.index(card)
         else:
             return -1
 

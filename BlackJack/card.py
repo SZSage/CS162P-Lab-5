@@ -8,8 +8,8 @@ class Card:
 
     # region constructor
     def __init__(self, value=0, suit=0):
-        self.__suit = suit
         self.__value = value
+        self.__suit = suit
 
     # endregion
 
