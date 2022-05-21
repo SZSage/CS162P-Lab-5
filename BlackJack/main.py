@@ -6,26 +6,6 @@ from handTests import *
 
 
 def main():
-    # testConstructor()
-    # print()
-    # testAddCard()
-    # print()
-    # testDisCard()
-    # print()
-    # testGetItem()
-    # print()
-    # testHasCard()
-    # print()
-    # testHasCardWithValue()
-    # print()
-    # testHasCardWithSuit()
-    # print()
-    # testIndexOf()
-    # print()
-    # testScore()
-    # print()
-    # testIsAce()
-    # print()
     print("Welcome to Blackjack\n")
     print("Play Blackjack against the dealer")
     deck = Deck()  # create deck

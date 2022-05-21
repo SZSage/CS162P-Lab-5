@@ -90,7 +90,7 @@ def testScore():
     hList.addCard(h1)
     hList.addCard(h2)
     print(f"Current cards in {hList}")
-    print(f"Expect score to be 10: {hList.score}")
+    print(f"Testing score. Expect score to be 10: {hList.score}")
 
 
 def testIsAce():
@@ -98,7 +98,7 @@ def testIsAce():
     h1 = Card(1, 2)
     hList.addCard(h1)
     print(f"Current cards in {hList}")
-    print(f"Expect score to be 1: {hList.score}")
+    print(f"Testing isAce. Expect score to be 1: {hList.score}")
 
 
 
